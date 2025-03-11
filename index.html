@@ -7,18 +7,20 @@
     <title>Portofolio</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
   </head>
 
   <body>
     <!-- Main header -->
     <header class="main-header">
       <!-- Logo -->
-      <div class="logo-header"></div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Our Profile</a>
-        <a href="#">Achivement</a>
-        <a href="#">Message Us</a>
+      <img class="logo" src="./logo.jpg" alt="logo-img" />
+      <!-- <div class="logo-header"></div> -->
+      <nav class="menu">
+        <a href="#home">Home</a>
+        <a href="#our-profile">Our Profile</a>
+        <a href="#achivement">Achivement</a>
+        <a href="#message-us">Message Us</a>
       </nav>
     </header>
 
@@ -28,20 +30,42 @@
     <main>
       <!-- Home Content -->
       <section id="home">
-        <header>
+        <header class="section-home-header">
           <h1>Welcome to my Website</h1>
           <p>Where you can see my Portofolio</p>
         </header>
 
         <!-- Banner Slide -->
-        <div class="banner-img"></div>
+        <div class="banner-img">
+          <div>
+            <img
+              class="img-slideshow"
+              src="https://i.pinimg.com/736x/39/0c/0f/390c0f9b5556d32e33fe77e1e85c0ff4.jpg"
+              alt="slide"
+            />
+
+            <img
+              class="img-slideshow"
+              src="https://i.pinimg.com/736x/e8/51/41/e8514167be935aca4f1e0781f6882438.jpg"
+              alt=""
+            />
+
+            <img
+              class="img-slideshow"
+              src="https://i.pinimg.com/736x/b9/bc/7b/b9bc7b428703500665ccc1931283501e.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
       </section>
 
       <hr />
 
       <!-- Our Profile Content -->
       <section id="our-profile">
-        <header>
+        <header class="section-our-profile-header">
           <h1>Our Profile</h1>
         </header>
 
@@ -60,7 +84,7 @@
 
       <!-- Achivement -->
       <section id="achivement">
-        <header>
+        <header class="section-achivement-header">
           <h1>Achivement</h1>
         </header>
 
@@ -68,17 +92,49 @@
         <div class="achivement-content"></div>
       </section>
 
+      <hr />
+
       <!-- Message Us -->
       <section id="message-us">
-        <header>
+        <header class="section-message-us-header">
           <h1>Message Us</h1>
         </header>
 
         <!-- Content Message Us -->
-        <div class="message-us-content"></div>
+        <div class="message-us-content">
+          <form action="#">
+            <div class="form-group">
+              <label for="nama">Nama :</label>
+              <input type="text" id="nama" />
+            </div>
+
+            <div class="form-group">
+              <label for="tanggal">Tanggal lahir :</label>
+              <input type="date" id="tanggal" />
+            </div>
+
+            <div class="form-group">
+              <label>Jenis kelamin :</label>
+              <input type="radio" id="laki" />
+              <label for="laki">Laki-laki</label>
+              <input type="radio" id="perempuan" />
+              <label for="perempuan">Perempuan</label>
+            </div>
+
+            <div class="form-group">
+              <label for="pesan">Pesan :</label>
+              <textarea name="pesan" id="pesan"></textarea>
+            </div>
+
+            <div class="form-button">
+              <button type="submit">Kirim</button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
 
+    <hr />
     <!-- Main Footer -->
     <footer>
       <p>&copy; 2025 Portofolio Leo</p>
