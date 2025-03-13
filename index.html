@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <!-- For responsive porpose -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio</title>
+    <title>Website Store</title>
 
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js"></script>
@@ -14,13 +14,15 @@
     <!-- Main header -->
     <header class="main-header">
       <!-- Logo -->
-      <img class="logo" src="./logo.jpg" alt="logo-img" />
-      <!-- <div class="logo-header"></div> -->
+      <div class="logo-container">
+        <img class="logo" src="./logo.jpg" alt="logo-img" />
+        <span class="logo-text">Top Up Store</span>
+      </div>
+
       <nav class="menu">
         <a href="#home">Home</a>
-        <a href="#our-profile">Our Profile</a>
-        <a href="#achivement">Achivement</a>
-        <a href="#message-us">Message Us</a>
+        <a href="#store">Store</a>
+        <a href="#message-us">Order</a>
       </nav>
     </header>
 
@@ -31,105 +33,118 @@
       <!-- Home Content -->
       <section id="home">
         <header class="section-home-header">
-          <h1>Welcome to my Website</h1>
-          <p>Where you can see my Portofolio</p>
+          <h1>Hi, <span id="username">User</span> Welcome to Our Store</h1>
+          <p>Silahkan Input Id Username Anda</p>
+          <input type="text" id="nameinput" placeholder="Masukkan Nama" />
+          <button id="changename">Ganti Nama</button>
         </header>
 
         <!-- Banner Slide -->
         <div class="banner-img">
-          <div>
-            <img
-              class="img-slideshow"
-              src="https://i.pinimg.com/736x/39/0c/0f/390c0f9b5556d32e33fe77e1e85c0ff4.jpg"
-              alt="slide"
-            />
+          <button class="prev" onclick="plusDivs(-1)">&#10094;</button>
+          <img class="img-slideshow" src="../asset/2.jpg" />
 
-            <img
-              class="img-slideshow"
-              src="https://i.pinimg.com/736x/e8/51/41/e8514167be935aca4f1e0781f6882438.jpg"
-              alt=""
-            />
-
-            <img
-              class="img-slideshow"
-              src="https://i.pinimg.com/736x/b9/bc/7b/b9bc7b428703500665ccc1931283501e.jpg"
-              alt=""
-            />
-          </div>
+          <img
+            class="img-slideshow"
+            src="https://i.pinimg.com/736x/b9/bc/7b/b9bc7b428703500665ccc1931283501e.jpg"
+            alt=""
+          />
+          <img
+            class="img-slideshow"
+            src="https://i.pinimg.com/736x/ca/bd/18/cabd18943906a995eb4939108267088f.jpg"
+            alt=""
+          />
+          <img class="img-slideshow" src="./asset/3.jpg" alt="" />
+          <button class="next" onclick="plusDivs(1)">&#10095;</button>
         </div>
-        <button onclick="plusDivs(-1)">Previous</button>
-        <button onclick="plusDivs(1)">Next</button>
       </section>
 
-      <hr />
-
-      <!-- Our Profile Content -->
-      <section id="our-profile">
-        <header class="section-our-profile-header">
-          <h1>Our Profile</h1>
+      <!-- Store Content -->
+      <section id="store">
+        <header class="section-store-header">
+          <h1>Store</h1>
         </header>
 
         <!-- Content Profile -->
-        <div class="our-profile-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
-            facere velit cum nihil nam corrupti sint, sequi commodi unde,
-            pariatur quisquam laborum ex aliquam tenetur iste illum beatae
-            aspernatur! Maxime?
-          </p>
+        <div class="store-content">
+          <h3>Berikut List Harga Topup Diamond yang tersedia di toko kami</h3>
+          <p>Pembayaran dapat melalui e-wallet dan Qris</p>
+          <div class="diamond-section">
+            <h2>Jumlah Diamond</h2>
+            <div class="diamond-grid">
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 1" />
+                <div class="diamond-price">100 diamonds</div>
+              </div>
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 2" />
+                <div class="diamond-price">250 diamonds</div>
+              </div>
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 3" />
+                <div class="diamond-price">500 diamonds</div>
+              </div>
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 3" />
+                <div class="diamond-price">1000 diamonds</div>
+              </div>
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 3" />
+                <div class="diamond-price">2500 diamonds</div>
+              </div>
+              <div class="diamond-container">
+                <img src="./asset/d1.png" alt="Diamond 3" />
+                <div class="diamond-price">5000 diamonds</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      <hr />
-
-      <!-- Achivement -->
-      <section id="achivement">
-        <header class="section-achivement-header">
-          <h1>Achivement</h1>
-        </header>
-
-        <!-- Content Achivement -->
-        <div class="achivement-content"></div>
-      </section>
-
-      <hr />
 
       <!-- Message Us -->
       <section id="message-us">
         <header class="section-message-us-header">
-          <h1>Message Us</h1>
+          <h1>Order</h1>
         </header>
 
         <!-- Content Message Us -->
-        <div class="message-us-content">
-          <form action="#">
-            <div class="form-group">
-              <label for="nama">Nama :</label>
-              <input type="text" id="nama" />
-            </div>
-
-            <div class="form-group">
-              <label for="tanggal">Tanggal lahir :</label>
-              <input type="date" id="tanggal" />
-            </div>
-
-            <div class="form-group">
-              <label>Jenis kelamin :</label>
-              <input type="radio" id="laki" />
-              <label for="laki">Laki-laki</label>
-              <input type="radio" id="perempuan" />
-              <label for="perempuan">Perempuan</label>
-            </div>
-
-            <div class="form-group">
-              <label for="pesan">Pesan :</label>
-              <textarea name="pesan" id="pesan"></textarea>
-            </div>
-
-            <div class="form-button">
-              <button type="submit">Kirim</button>
-            </div>
+        <div class="message-content">
+          <form onsubmit="return validateForm()" class="message-input">
+            <table class="table-content">
+              <tr>
+                <td><label for="nama">Id Game</label></td>
+                <td>:</td>
+                <td><input type="text" id="nama" placeholder="Id" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">e-mail</label></td>
+                <td>:</td>
+                <td><input type="email" id="email" placeholder="Email" /></td>
+              </tr>
+              <tr>
+                <td><label for="list-toko">Pembayaran</label></td>
+                <td>:</td>
+                <td>
+                  <select id="list-toko">
+                    <option value="" disabled selected></option>
+                    <option value="Toko A">Dana</option>
+                    <option value="Toko B">Gopay</option>
+                    <option value="Toko C">Transfer Bank</option>
+                    <option value="Toko D">OVO</option>
+                  </select>
+                </td>
+              </tr>
+            </table>
+            <form><input class="submit" type="submit" value="kirim" /></form>
           </form>
+
+          <div class="message-output">
+            <h3>CheckOut</h3>
+            <p>Nama : <span id="output-nama"></span></p>
+            <p><strong>Email:</strong> <span id="output-email"></span></p>
+            <p><strong>List Toko:</strong> <span id="output-toko"></span></p>
+            <p>Diamond: <span id="output-diamond"></span></p>
+          </div>
         </div>
       </section>
     </main>
